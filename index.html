@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duda e Ray</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fcfcfc75; 
+            color: #000000; 
+            line-height: 1.6; 
+            margin: 0;
+            padding: 20px;
+            text-align: center; 
+        }
+        h2 {
+            color: #161212; 
+            font-size: 1.2em; 
+            margin-bottom: 20px; 
+        }
+        p {
+            font-size: 1em; 
+            margin: 0 0 20px 0; 
+            padding: 10px; 
+    
+            
+        }
+        button {
+            background-color: #f80000; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>    
+</head>
+<body>
+<h2><p>“Depois que eu vi o seu sorriso e o brilho nos seus olhos enquanto me olhava, eu parei de temer o amor”</p></h2>
+
+<p>Nunca vou me cansar de dizer, eu jamais vou esquecer o jeito que você me olhou quando eu cheguei no bar na primeira vez que saímos juntas. Em toda a minha vida, ninguém jamais tinha me olhado com tanto afeto. Pra mim, naquele momento, só existia nós, só existia você. Você me olhou da forma mais linda que alguém já tinha me olhado. Eu mal te conhecia, mas já sentia tanto sem saber o tanto que eu ainda iria sentir.</p> 
+
+<p>“Tem gente que amanhece com você<br>
+Tem gente que é o seu amanhecer<br>
+Tem gente que acontece nada a ver<br>
+Tem gente, e tem eu e você”<br>
+
+<p>Parafraseando a pioneira do nosso encontro… a gente aconteceu ao acaso e foi o acaso mais lindo. Você me acalma, me desacelera, me traz tanto conforto e segurança, como ninguém. Obrigada por ressignificar tanta coisa aqui dentro. Eu amo você, muito.</p>
+<br>
+<script>
+  function openSpotifyPlaylist() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var spotifyAppUrl = 'spotify:playlist:6umSADLbwJE42dvQ7Pykws';  
+    var spotifyWebUrl = 'https://open.spotify.com/playlist/6umSADLbwJE42dvQ7Pykws?si=-kdtEnyxRvWd5sSzhYTzkA&pt=b74568dc05913d94d4f6c7580caa0c63&pi=u-PItqoqXVQpSk';
+
+    if (isMobile) {
+      
+      window.location.href = spotifyAppUrl;
+      setTimeout(function() {
+        if (navigator.userAgent.match(/Android/i)) {
+          window.location.href = 'market://details?id=com.spotify.music';  
+        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+          window.location.href = 'https://apps.apple.com/app/spotify-music/id324684580';  
+        } else {
+          window.location.href = spotifyWebUrl;  
+        }
+      }, 2000);  
+    } else {
+      window.location.href = spotifyWebUrl;
+    }
+  }
+</script>
+  <button onclick="openSpotifyPlaylist()">Músicas que me lembram nós</button>
+</body>
+</html>
